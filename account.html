@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account – SaloneHealth</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <div class="emergency-bar">
+        <i class="fa-solid fa-triangle-exclamation"></i> Health Emergency Hotline: <a href="tel:117">117</a>
+        &nbsp;|&nbsp; COVID-19 Info: <a href="tel:117">Call 117</a>
+    </div>
+
+    <nav id="navbar">
+        <div class="container nav-inner">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon"><i class="fa-solid fa-hospital"></i></div>
+                <span>SaloneHealth</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#alerts">Health Alerts</a></li>
+                <li><a href="clinics.html">Find a Clinic</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="account.html">Account</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="contact.html" class="btn btn-primary">Book Appointment</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="index.html#alerts">Health Alerts</a>
+            <a href="clinics.html">Find a Clinic</a>
+            <a href="contact.html">Contact</a>
+            <a href="account.html">Account</a>
+        </div>
+    </nav>
+
+    <section class="hero-small"
+        style="min-height: 50vh; background: linear-gradient(160deg, rgba(11,50,26,.82) 0%, rgba(14,77,138,.55) 100%), url('https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=1600&q=80') center/cover no-repeat; display: flex; align-items: center; padding: 120px 0 80px; position: relative;">
+        <div class="container">
+            <div class="hero-content" style="max-width: 620px; animation: fadeUp .8s ease both;">
+                <h1
+                    style="font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 900; line-height: 1.1; color: #fff; margin-bottom: 20px;">
+                    My Account</h1>
+                <p style="font-size: 1.08rem; color: rgba(255,255,255,.82); margin-bottom: 36px; max-width: 520px;">
+                    Manage your profile and review your appointment requests securely.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="account-dashboard">
+        <div class="container">
+            <div id="accountDashboard" class="dashboard-grid fade-up">
+                <div class="profile-card" id="profileCard">
+                    <h3>Profile Overview</h3>
+                    <div id="profileInfo"></div>
+                    <button id="logoutBtn" class="btn btn-outline">Logout</button>
+                </div>
+                <div class="appointment-card">
+                    <h3>Your booking requests</h3>
+                    <div id="accountError" class="auth-message error" style="display:none;"></div>
+                    <div class="appointment-list" id="appointmentsList"></div>
+                    <div id="noAppointments" class="auth-message" style="display:none;">No booking requests found yet.
+                        Book an appointment from the contact page.</div>
+                </div>
+            </div>
+
+            <div id="signedOutCard" class="signed-out-card fade-up" style="display:none;">
+                <h3>Welcome to SaloneHealth</h3>
+                <p>To view your dashboard, please <a href="login.html">login</a> or <a href="register.html">create an
+                        account</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="logo-icon"><i class="fa-solid fa-hospital"></i></div>
+                        <span>SaloneHealth</span>
+                    </div>
+                    <p>Connecting Sierra Leoneans to quality health services across all 16 districts.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#alerts">Health Alerts</a></li>
+                        <li><a href="clinics.html">Find a Clinic</a></li>
+                        <li><a href="contact.html">Book Appointment</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html">Register</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Emergency</h4>
+                    <ul>
+                        <li><a href="tel:117"><i class="fa-solid fa-phone"></i> 117 – National Hotline</a></li>
+                        <li><a href="#">Connaught Hospital</a></li>
+                        <li><a href="#">Princess Christian</a></li>
+                        <li><a href="#">Rokupa Government</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 SaloneHealth. Built for Sierra Leone.</span>
+                <span>Partnered with <a href="#">Ministry of Health &amp; Sanitation, SL</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+</body>
+
+</html>

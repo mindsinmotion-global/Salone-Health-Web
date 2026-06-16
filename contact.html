@@ -1,224 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact & Book Appointment – SaloneHealth Sierra Leone Health Services</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-  <link rel="stylesheet" href="styles.css"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
-<div class="emergency-bar">
-  <i class="fa-solid fa-triangle-exclamation"></i> Health Emergency Hotline: <a href="tel:117">117</a> &nbsp;|&nbsp; COVID-19 Info: <a href="tel:117">Call 117</a>
-</div>
-
-<nav id="navbar">
-  <div class="container nav-inner">
-    <a href="index.html" class="nav-logo">
-      <div class="logo-icon"><i class="fa-solid fa-hospital"></i></div>
-      <span>SaloneHealth</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="services.html">Services</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="index.html#alerts">Health Alerts</a></li>
-      <li><a href="clinics.html">Find a Clinic</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="nav-cta">
-      <a href="contact.html" class="btn btn-primary">Book Appointment</a>
-    </div>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+  <div class="emergency-bar">
+    <i class="fa-solid fa-triangle-exclamation"></i> Health Emergency Hotline: <a href="tel:117">117</a> &nbsp;|&nbsp;
+    COVID-19 Info: <a href="tel:117">Call 117</a>
   </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="services.html">Services</a>
-    <a href="about.html">About</a>
-    <a href="index.html#alerts">Health Alerts</a>
-    <a href="clinics.html">Find a Clinic</a>
-    <a href="contact.html">Book Appointment</a>
-  </div>
-</nav>
 
-<section class="hero-small" style="min-height: 50vh; background: linear-gradient(160deg, rgba(11,50,26,.82) 0%, rgba(14,77,138,.55) 100%), url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1600&q=80') center/cover no-repeat; display: flex; align-items: center; padding: 120px 0 80px; position: relative;">
-  <div class="container">
-    <div class="hero-content" style="max-width: 640px; animation: fadeUp .8s ease both;">
-      <h1 style="font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 900; line-height: 1.1; color: #fff; margin-bottom: 20px;">Get In Touch</h1>
-      <p style="font-size: 1.08rem; color: rgba(255,255,255,.82); margin-bottom: 36px; max-width: 500px;">Register or book an appointment at SaloneHealth</p>
-    </div>
-  </div>
-</section>
-
-<section class="contact" style="padding: 80px 0;">
-  <div class="container">
-    <div class="contact-grid">
-      <div class="contact-info fade-up">
-        <div class="section-label">Get In Touch</div>
-        <h2>Register or Book an Appointment</h2>
-        <p>Register for free health updates, book a consultation at a nearby facility, or reach out to our health advisory team.</p>
-        <div class="info-items">
-          <div class="info-item">
-            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
-            <div><h4>Head Office</h4><p>12 Rawdon Street, Freetown, Sierra Leone</p></div>
-          </div>
-          <div class="info-item">
-            <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
-            <div><h4>Health Hotline</h4><p>117 (Emergency) | +232 76 000 117</p></div>
-          </div>
-          <div class="info-item">
-            <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
-            <div><h4>Email</h4><p>info@salonehealth.sl</p></div>
-          </div>
-          <div class="info-item">
-            <div class="info-icon"><i class="fa-regular fa-clock"></i></div>
-            <div><h4>Office Hours</h4><p>Mon – Fri: 8:00 AM – 5:00 PM</p></div>
-          </div>
-        </div>
+  <nav id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon"><i class="fa-solid fa-hospital"></i></div>
+        <span>SaloneHealth</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#alerts">Health Alerts</a></li>
+        <li><a href="clinics.html">Find a Clinic</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary">Book Appointment</a>
       </div>
-      <div class="contact-form fade-up">
-        <h3>Patient Registration &amp; Inquiry</h3>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="fname">First Name *</label>
-            <input type="text" id="fname" placeholder="e.g. Aminata"/>
-          </div>
-          <div class="form-group">
-            <label for="lname">Last Name *</label>
-            <input type="text" id="lname" placeholder="e.g. Koroma"/>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="phone">Phone Number *</label>
-            <input type="tel" id="phone" placeholder="+232 76 000 000"/>
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="you@example.com"/>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="district">Your District *</label>
-          <select id="district">
-            <option value="">-- Select District --</option>
-            <option>Western Area</option>
-            <option>Bo</option>
-            <option>Kenema</option>
-            <option>Kono</option>
-            <option>Bombali</option>
-            <option>Tonkolili</option>
-            <option>Koinadugu</option>
-            <option>Kailahun</option>
-            <option>Pujehun</option>
-            <option>Moyamba</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="service">Service Needed *</label>
-          <select id="service">
-            <option value="">-- Select Service --</option>
-            <option>Maternal &amp; Child Health</option>
-            <option>Primary Care</option>
-            <option>Disease Testing / Lab</option>
-            <option>Mental Health Support</option>
-            <option>Emergency Assistance</option>
-            <option>Health Education</option>
-            <option>General Inquiry</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="message">Additional Information</label>
-          <textarea id="message" placeholder="Describe your health concern or question..."></textarea>
-        </div>
-        <button class="form-submit" onclick="submitForm()">Submit Registration</button>
-        <div id="form-success"><i class="fa-solid fa-circle-check"></i> Thank you! We will contact you within 24 hours.</div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="index.html#alerts">Health Alerts</a>
+      <a href="clinics.html">Find a Clinic</a>
+      <a href="contact.html">Book Appointment</a>
+    </div>
+  </nav>
+
+  <section class="hero-small"
+    style="min-height: 50vh; background: linear-gradient(160deg, rgba(11,50,26,.82) 0%, rgba(14,77,138,.55) 100%), url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1600&q=80') center/cover no-repeat; display: flex; align-items: center; padding: 120px 0 80px; position: relative;">
+    <div class="container">
+      <div class="hero-content" style="max-width: 640px; animation: fadeUp .8s ease both;">
+        <h1
+          style="font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 6vw, 4rem); font-weight: 900; line-height: 1.1; color: #fff; margin-bottom: 20px;">
+          Get In Touch</h1>
+        <p style="font-size: 1.08rem; color: rgba(255,255,255,.82); margin-bottom: 36px; max-width: 500px;">Register or
+          book an appointment at SaloneHealth</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="contact-other" style="background: #f9faf7; padding: 80px 0;">
-  <div class="container">
-    <div class="section-label" style="text-align: center;">Other Ways to Connect</div>
-    <h2 class="section-title" style="text-align: center; margin-bottom: 60px;">Contact SaloneHealth</h2>
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px;">
-      <div class="fade-up" style="padding: 40px; background: white; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,.05); text-align: center;">
-        <div style="font-size: 2.5rem; color: var(--green); margin-bottom: 12px;"><i class="fa-solid fa-phone"></i></div>
-        <h3 style="font-size: 1.2rem; margin-bottom: 12px;">Call Us</h3>
-        <p style="margin-bottom: 16px;">117 (Emergency Hotline)</p>
-        <p style="margin-bottom: 16px;">+232 76 000 117</p>
-        <p style="color: var(--muted); font-size: 0.9rem;">24/7 available</p>
-      </div>
-      
-      <div class="fade-up" style="padding: 40px; background: white; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,.05); text-align: center;">
-        <div style="font-size: 2.5rem; color: var(--green); margin-bottom: 12px;"><i class="fa-solid fa-envelope"></i></div>
-        <h3 style="font-size: 1.2rem; margin-bottom: 12px;">Email Us</h3>
-        <p style="margin-bottom: 16px;"><a href="mailto:info@salonehealth.sl">info@salonehealth.sl</a></p>
-        <p style="color: var(--muted); font-size: 0.9rem;">Response within 24 hours</p>
-      </div>
-      
-      <div class="fade-up" style="padding: 40px; background: white; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,.05); text-align: center;">
-        <div style="font-size: 2.5rem; color: var(--green); margin-bottom: 12px;"><i class="fa-solid fa-location-dot"></i></div>
-        <h3 style="font-size: 1.2rem; margin-bottom: 12px;">Visit Us</h3>
-        <p style="margin-bottom: 16px;">12 Rawdon Street<br/>Freetown, Sierra Leone</p>
-        <p style="color: var(--muted); font-size: 0.9rem;">Mon–Fri: 8AM–5PM</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="footer-logo">
-          <div class="logo-icon"><i class="fa-solid fa-hospital"></i></div>
-          <span>SaloneHealth</span>
+  <section class="contact" style="padding: 80px 0;">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info fade-up">
+          <div class="section-label">Get In Touch</div>
+          <h2>Register or Book an Appointment</h2>
+          <p>Register for free health updates, book a consultation at a nearby facility, or reach out to our health
+            advisory team.</p>
+          <div class="info-items">
+            <div class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <h4>Head Office</h4>
+                <p>12 Rawdon Street, Freetown, Sierra Leone</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <h4>Health Hotline</h4>
+                <p>117 (Emergency) | +232 76 000 117</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <h4>Email</h4>
+                <p>info@salonehealth.sl</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon"><i class="fa-regular fa-clock"></i></div>
+              <div>
+                <h4>Office Hours</h4>
+                <p>Mon – Fri: 8:00 AM – 5:00 PM</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <p>Connecting Sierra Leoneans to quality health services across all 16 districts. A digital health platform for a healthier nation.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="services.html">Maternal Health</a></li>
-          <li><a href="services.html">Primary Care</a></li>
-          <li><a href="services.html">Disease Testing</a></li>
-          <li><a href="services.html">Mental Health</a></li>
-          <li><a href="services.html">Emergency</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="index.html#alerts">Health Alerts</a></li>
-          <li><a href="clinics.html">Find a Clinic</a></li>
-          <li><a href="contact.html">Book Appointment</a></li>
-          <li><a href="contact.html">Register</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Emergency</h4>
-        <ul>
-          <li><a href="tel:117"><i class="fa-solid fa-phone"></i> 117 – National Hotline</a></li>
-          <li><a href="#">Connaught Hospital</a></li>
-          <li><a href="#">Ola During Children's</a></li>
-          <li><a href="#">Princess Christian</a></li>
-          <li><a href="#">Rokupa Government</a></li>
-        </ul>
+        <div class="contact-form fade-up">
+          <h3>Patient Registration &amp; Inquiry</h3>
+          <div id="contactNotice" class="booking-notice">
+            <p>You must be <a href="login.html">logged in</a> to book an appointment. If you do not have an account,
+              please <a href="register.html">register</a>.</p>
+          </div>
+          <div id="contactLoggedIn" class="booking-notice booking-success" style="display:none;">
+            <p>You are signed in. Your profile details are pre-filled below for secure booking.</p>
+          </div>
+          <div id="contactMessage" class="auth-message" style="display:none;"></div>
+          <form id="contactBookingForm" class="auth-form" style="display:none;">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name *</label>
+                <input type="text" id="fname" name="fname" placeholder="e.g. Aminata" required />
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name *</label>
+                <input type="text" id="lname" name="lname" placeholder="e.g. Koroma" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" placeholder="+232 76 000 000" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="district">Your District *</label>
+              <select id="district" name="district" required>
+                <option value="">-- Select District --</option>
+                <option>Western Area</option>
+                <option>Bo</option>
+                <option>Kenema</option>
+                <option>Kono</option>
+                <option>Bombali</option>
+                <option>Tonkolili</option>
+                <option>Koinadugu</option>
+                <option>Kailahun</option>
+                <option>Pujehun</option>
+                <option>Moyamba</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="service">Service Needed *</label>
+              <select id="service" name="service" required>
+                <option value="">-- Select Service --</option>
+                <option>Maternal &amp; Child Health</option>
+                <option>Primary Care</option>
+                <option>Disease Testing / Lab</option>
+                <option>Mental Health Support</option>
+                <option>Emergency Assistance</option>
+                <option>Health Education</option>
+                <option>General Inquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Additional Information</label>
+              <textarea id="message" name="message"
+                placeholder="Describe your health concern or question..."></textarea>
+            </div>
+            <button type="submit" class="form-submit">Submit Booking</button>
+          </form>
+        </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 SaloneHealth. Built for Sierra Leone. | Limkokwing University ICT Project</span>
-      <span>Partnered with <a href="#">Ministry of Health &amp; Sanitation, SL</a></span>
-    </div>
-  </div>
-</footer>
+  </section>
 
-<script src="script.js"></script>
+  <section class="contact-other" style="background: #f9faf7; padding: 80px 0;">
+    <div class="container">
+      <div class="section-label" style="text-align: center;">Other Ways to Connect</div>
+      <h2 class="section-title" style="text-align: center; margin-bottom: 60px;">Contact SaloneHealth</h2>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px;">
+        <div class="fade-up"
+          style="padding: 40px; background: white; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,.05); text-align: center;">
+          <div style="font-size: 2.5rem; color: var(--green); margin-bottom: 12px;"><i class="fa-solid fa-phone"></i>
+          </div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 12px;">Call Us</h3>
+          <p style="margin-bottom: 16px;">117 (Emergency Hotline)</p>
+          <p style="margin-bottom: 16px;">+232 76 000 117</p>
+          <p style="color: var(--muted); font-size: 0.9rem;">24/7 available</p>
+        </div>
+
+        <div class="fade-up"
+          style="padding: 40px; background: white; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,.05); text-align: center;">
+          <div style="font-size: 2.5rem; color: var(--green); margin-bottom: 12px;"><i class="fa-solid fa-envelope"></i>
+          </div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 12px;">Email Us</h3>
+          <p style="margin-bottom: 16px;"><a href="mailto:info@salonehealth.sl">info@salonehealth.sl</a></p>
+          <p style="color: var(--muted); font-size: 0.9rem;">Response within 24 hours</p>
+        </div>
+
+        <div class="fade-up"
+          style="padding: 40px; background: white; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,.05); text-align: center;">
+          <div style="font-size: 2.5rem; color: var(--green); margin-bottom: 12px;"><i
+              class="fa-solid fa-location-dot"></i></div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 12px;">Visit Us</h3>
+          <p style="margin-bottom: 16px;">12 Rawdon Street<br />Freetown, Sierra Leone</p>
+          <p style="color: var(--muted); font-size: 0.9rem;">Mon–Fri: 8AM–5PM</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="logo-icon"><i class="fa-solid fa-hospital"></i></div>
+            <span>SaloneHealth</span>
+          </div>
+          <p>Connecting Sierra Leoneans to quality health services across all 16 districts. A digital health platform
+            for a healthier nation.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html">Maternal Health</a></li>
+            <li><a href="services.html">Primary Care</a></li>
+            <li><a href="services.html">Disease Testing</a></li>
+            <li><a href="services.html">Mental Health</a></li>
+            <li><a href="services.html">Emergency</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="index.html#alerts">Health Alerts</a></li>
+            <li><a href="clinics.html">Find a Clinic</a></li>
+            <li><a href="contact.html">Book Appointment</a></li>
+            <li><a href="contact.html">Register</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Emergency</h4>
+          <ul>
+            <li><a href="tel:117"><i class="fa-solid fa-phone"></i> 117 – National Hotline</a></li>
+            <li><a href="#">Connaught Hospital</a></li>
+            <li><a href="#">Ola During Children's</a></li>
+            <li><a href="#">Princess Christian</a></li>
+            <li><a href="#">Rokupa Government</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 SaloneHealth. Built for Sierra Leone. | Limkokwing University ICT Project</span>
+        <span>Partnered with <a href="#">Ministry of Health &amp; Sanitation, SL</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+
 </html>

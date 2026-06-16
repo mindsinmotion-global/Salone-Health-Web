@@ -24,7 +24,7 @@ const clinicsData = {
     { name: 'Connaught Hospital', addr: 'Wallace Johnson Street, Freetown', tag: 'Referral Hospital' },
     { name: 'Rokupa Government Hospital', addr: 'Rokupa, East Freetown', tag: 'Government Hospital' },
     { name: 'Lumley Government Hospital', addr: 'Lumley, West Freetown', tag: 'Government Hospital' },
-    { name: 'Waterloo Community Health Centre', addr: 'Waterloo, Rural Western', tag: 'CHC' },
+    { name: 'Waterloo Community Health Centre', addr: 'Waterloo, Rural Western', tag: 'Community Health Centre' },
   ],
   'Bo': [
     { name: 'Bo Government Hospital', addr: 'Hospital Road, Bo Town', tag: 'Government Hospital' },
@@ -61,22 +61,67 @@ const clinicsData = {
   ],
 };
 
-function showClinics(district) {
-  document.querySelectorAll('.district-btn').forEach(b => {
-    b.classList.toggle('active', b.textContent.trim().includes(district));
+let activeDistrict = 'Western Area';
+const clinicSearch = document.getElementById('clinicSearch');
+const clinicType = document.getElementById('clinicType');
+const resetFilters = document.getElementById('resetFilters');
+
+function filterFacilities(facilities, query, type) {
+  const search = query.trim().toLowerCase();
+  return facilities.filter(facility => {
+    const matchesType = !type || facility.tag === type;
+    const matchesSearch = !search || [facility.name, facility.addr, facility.tag].some(field => field.toLowerCase().includes(search));
+    return matchesType && matchesSearch;
   });
-  const results = document.getElementById('clinicResults');
+}
+
+function updateDistrictButtons(district) {
+  document.querySelectorAll('.district-btn').forEach(button => {
+    button.classList.toggle('active', button.dataset.district === district);
+  });
+}
+
+function renderFacilityList(facilities) {
   const list = document.getElementById('clinicList');
-  const title = document.getElementById('clinicResultTitle');
-  const sub = document.getElementById('clinicResultSub');
-  const facilities = clinicsData[district] || [];
-  title.textContent = 'Health Facilities in ' + district;
-  sub.textContent = facilities.length + ' verified facilities found';
+  const empty = document.getElementById('clinicEmpty');
+  if (!facilities.length) {
+    list.innerHTML = '';
+    empty.classList.add('show');
+    return;
+  }
+  empty.classList.remove('show');
   list.innerHTML = facilities.map(f =>
-    '<div class="clinic-item"><h4><i class="fa-solid fa-hospital"></i> ' + f.name + '</h4><p><i class="fa-solid fa-location-dot"></i> ' + f.addr + '</p><span class="tag">' + f.tag + '</span></div>'
+    `<div class="clinic-item"><h4><i class="fa-solid fa-hospital"></i> ${f.name}</h4><p><i class="fa-solid fa-location-dot"></i>${f.addr}</p><span class="tag">${f.tag}</span></div>`
   ).join('');
+}
+
+function showClinics(district) {
+  if (!clinicSearch || !clinicType || !resetFilters) return;
+
+  activeDistrict = district;
+  updateDistrictButtons(district);
+
+  const facilities = clinicsData[district] || [];
+  const filtered = filterFacilities(facilities, clinicSearch.value, clinicType.value);
+
+  document.getElementById('clinicResultTitle').textContent = `Health Facilities in ${district}`;
+  document.getElementById('clinicResultSub').textContent = `${filtered.length} verified facility${filtered.length === 1 ? '' : 'ies'} found`;
+  renderFacilityList(filtered);
+
+  const results = document.getElementById('clinicResults');
   results.classList.add('show');
   results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+if (clinicSearch && clinicType && resetFilters) {
+  clinicSearch.addEventListener('input', () => showClinics(activeDistrict));
+  clinicType.addEventListener('change', () => showClinics(activeDistrict));
+  resetFilters.addEventListener('click', () => {
+    clinicSearch.value = '';
+    clinicType.value = '';
+    showClinics(activeDistrict);
+  });
+  window.addEventListener('load', () => showClinics(activeDistrict));
 }
 
 function submitForm() {
